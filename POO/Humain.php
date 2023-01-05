@@ -1,17 +1,17 @@
 <?php
 
-class Humain
+abstract class Humain
 {
     public $taille = 175;
     public $name ;
     private $secret = 'gold';
 
+    protected $force = 1;
+
+
     public function __construct($name)
     {
-
         $this->name = $name ;
-
-
         echo 'je suis née '.$this->name.PHP_EOL;
     }
 
@@ -28,7 +28,6 @@ class Humain
     public function marcher()
     {
         echo 'je marche '.PHP_EOL;
-
     }
 
     public function maTaille()
@@ -39,24 +38,34 @@ class Humain
 
     public function setSecret()
     {
-        return $this->secret = 'paladium'.PHP_EOL;
+        $this->secret = 'paladium'.PHP_EOL;
     }
 
     public function getSecret()
     {
         return $this->secret. PHP_EOL;
     }
+
+    /**
+     * @return int
+     */
+    public function getForce()
+    {
+        return $this->force;
+    }
+
+    /**
+     * @param int $force
+     * @return Humain
+     */
+    public function setForce($force)
+    {
+        $this->force = $force;
+        //return $this;
+    }
+
 }
 
-$marcelline = new Humain('marceline', 'Dupont');
-$constance = new Humain('constance', 'Durand');
-
-$marcelline->showName()->marcher();
-
-$constance->showName()->maTaille();
-echo $marcelline->setSecret();
-echo $marcelline->getSecret();
-echo 'le secret est '.$constance->getSecret();
 
 
 
