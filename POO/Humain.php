@@ -7,17 +7,24 @@ abstract class Humain
     private $secret = 'gold';
 
     protected $force = 1;
+    static $population = 0;
 
 
     public function __construct($name)
     {
         $this->name = $name ;
+        echo 'Population = '.(self::$population++) . PHP_EOL;
         echo 'je suis née '.$this->name.PHP_EOL;
+
+        echo 'population = '.self::$population. PHP_EOL;
     }
 
     public function __destruct()
     {
+        echo 'Population = '.(self::$population--) . PHP_EOL;
         echo 'je suis morte '.$this->name.PHP_EOL;
+
+        echo 'population = '.self::$population .PHP_EOL;
     }
 
     public function showName(){

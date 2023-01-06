@@ -17,3 +17,4 @@ echo 'le secret est '.$constance->getSecret();
 $adam = new Homme('adam');
 $adam->showName()->marcher();
 echo $adam->showName()->getForce()."\n\r";
+$marcelline->faireEnfant();
