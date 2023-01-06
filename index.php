@@ -3,6 +3,7 @@ require_once ('class/Humain.php');
 require ('class/Homme.php');
 require ('class/Femme.php');
 require_once ('class/Bipede.php');
+require_once ('Interface/Mamifere.php');
 
 
 
@@ -21,3 +22,7 @@ $adam->showName()->marcher();
 echo $adam->showName()->getForce()."\n\r";
 $marcelline->faireEnfant();
 $adam->courir();
+$marcelline->courir();
+$adam->pilosite();
+$marcelline->pilosite();
+

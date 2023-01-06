@@ -13,4 +13,10 @@ class Femme extends Humain
     {
         echo 'oui, je peux enfanter'.PHP_EOL;
     }
+
+    public function pilosite()
+    {
+        echo 'J\'ai bien moins de poil que l\'hommes !!!!'.PHP_EOL;
+
+    }
 }

@@ -1,8 +1,9 @@
 <?php
 require ('Bipede.php');
+require ('Interface/Mamifere.php');
 
 
-abstract class Humain
+abstract class Humain implements \InterfaceMamifere\Mamifere
 {
     use Bipede;
     public $taille = 175;
@@ -73,6 +74,11 @@ abstract class Humain
         //return $this;
     }
 
+    public function pilosite()
+    {
+        echo 'J\'ai du poil !!'.PHP_EOL;
+
+    }
 }
 
 
