@@ -1,7 +1,9 @@
 <?php
-require_once ('POO/Humain.php');
-require_once ('POO/Femme.php');
-require_once ('POO/Homme.php');
+require_once ('class/Humain.php');
+require ('class/Homme.php');
+require ('class/Femme.php');
+require_once ('class/Bipede.php');
+
 
 
 $marcelline = new Femme('marceline');
@@ -18,3 +20,4 @@ $adam = new Homme('adam');
 $adam->showName()->marcher();
 echo $adam->showName()->getForce()."\n\r";
 $marcelline->faireEnfant();
+$adam->courir();

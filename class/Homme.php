@@ -1,8 +1,12 @@
 <?php
 
+
+/**
+ *
+ */
 class Homme extends Humain
 {
-
+    use Bipede;
     public function __construct($name)
     {
         parent::__construct($name);

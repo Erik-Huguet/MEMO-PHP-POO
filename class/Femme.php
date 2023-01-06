@@ -1,5 +1,7 @@
 <?php
 
+
+
 class Femme extends Humain
 {
     public function __construct($name)
@@ -9,6 +11,6 @@ class Femme extends Humain
     }
     public function faireEnfant()
     {
-        echo "oui, je peux enfanter".PHP_EOL;
+        echo 'oui, je peux enfanter'.PHP_EOL;
     }
 }

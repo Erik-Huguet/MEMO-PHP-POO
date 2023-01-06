@@ -1,14 +1,16 @@
 <?php
+require ('Bipede.php');
+
 
 abstract class Humain
 {
+    use Bipede;
     public $taille = 175;
     public $name ;
     private $secret = 'gold';
 
     protected $force = 1;
     static $population = 0;
-
 
     public function __construct($name)
     {
